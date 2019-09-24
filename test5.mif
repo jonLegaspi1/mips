@@ -1,0 +1,15 @@
+Depth = 256;
+Width = 32;
+Address_radix = hex;
+Data_radix = bin;
+% Program RAM Data %					-- This program will test these instructions :
+							-- lw, addu, and, xor, or, sub, multu, and j
+Content
+  Begin
+00 : 10001100000100011111111111111000	;		-- lw $s1, 0xFFF8($Zero)	 / 	load word in adress 0x9 + zero to s1	// s1/r17 = 4
+01 : 10001100000100101111111111111100	;		-- lw $s2, 0xFFFC($zero) 	 / 	load word in adress 0xA 	// s2/r18 = 5
+02 : 10101100000100011111111111111100 ;   -- sw $s1, 0xFFFC
+03 : 10101100000100101111111111111100 ;  -- sw $s2
+04 : 00001000000000000000000000000100 ; -- j 4 
+
+End;

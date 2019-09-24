@@ -1,0 +1,15 @@
+Depth = 256;
+Width = 32;
+Address_radix = hex;
+Data_radix = bin;
+% Program RAM Data %
+Content
+  Begin							-- This program will call a subroutine
+							-- beq, jal, jr, j 
+
+00 : 00001100000000000000000000000010	;		-- jal  2		 / 	jump to address 2 and $ra= PC + 4      // $ra/r31 = 4
+01 : 00001000000000000000000000000001	;		-- j  1			 / 	infinite loop
+02 : 00000011111000000000000000001000	;		-- jr $ra / 	$s1 = 0;	
+
+
+End;
